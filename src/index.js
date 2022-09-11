@@ -1,5 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { PhoneNumberProvider } from "./contexts/phoneNumberContext";
 
 // layout page
 import Header from "./components/Header";
@@ -15,11 +16,13 @@ const root = createRoot(document.getElementById("root"));
 
 root.render(
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Header />}>
-        <Route index element={<HomeLazy />} />
-        <Route path="*" element={<NotFoundLazy />} />
-      </Route>
-    </Routes>
+    <PhoneNumberProvider>
+      <Routes>
+        <Route path="/" element={<Header />}>
+          <Route index element={<HomeLazy />} />
+          <Route path="*" element={<NotFoundLazy />} />
+        </Route>
+      </Routes>
+    </PhoneNumberProvider>
   </BrowserRouter>
 );

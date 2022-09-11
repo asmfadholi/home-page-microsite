@@ -1,19 +1,23 @@
-// styles
 import { useState } from "react";
+import { usePhoneNumberActionContext } from "../../contexts/phoneNumberContext";
+
+// styles
 import styles from "./index.module.css";
 
 function TelephoneForm() {
-  const [phone, setPhone] = useState("");
+  const { setPhoneNumber } = usePhoneNumberActionContext();
+  const [currentPhone, setCurrentPhone] = useState("");
 
   const handleChangePhoneNumber = (e) => {
     e.preventDefault();
     e.stopPropagation();
     const getValue = e.target.value || "";
-    setPhone(getValue);
+    setCurrentPhone(getValue);
   };
 
   const handleClickGo = () => {
-    setPhone("");
+    setPhoneNumber(currentPhone);
+    setCurrentPhone("");
   };
 
   return (
@@ -23,7 +27,7 @@ function TelephoneForm() {
         type="number"
         placeholder="ex: 098877126"
         onChange={handleChangePhoneNumber}
-        value={phone}
+        value={currentPhone}
       />
       <br />
       <br />
