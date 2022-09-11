@@ -16,7 +16,7 @@ function TelephoneForm() {
   };
 
   const handleClickGo = () => {
-    setPhoneNumber(currentPhone);
+    if (currentPhone) setPhoneNumber(currentPhone);
     setCurrentPhone("");
   };
 
