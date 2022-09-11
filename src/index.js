@@ -12,6 +12,7 @@ import ContactLazyLoader from "./pages/contact/Lazy";
 import AboutLazyLoader from "./pages/about/Lazy";
 
 // styles
+import "react-loading-skeleton/dist/skeleton.css";
 import "./index.css";
 
 const root = createRoot(document.getElementById("root"));

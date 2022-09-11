@@ -1,10 +1,11 @@
 import React, { Suspense } from "react";
+import Skeleton from "react-loading-skeleton";
 
 const HomeLazy = React.lazy(() => import("."));
 
 function HomeLazyLoader() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Skeleton height={300} />}>
       <HomeLazy />
     </Suspense>
   );
