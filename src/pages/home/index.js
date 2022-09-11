@@ -1,6 +1,7 @@
 // components
 import AboutLazy from "../../components/About/Lazy";
 import ContactLazy from "../../components/Contact/Lazy";
+import TelephoneFormLazyLoader from "../../components/TelephoneForm/Lazy";
 
 // styles
 import styles from "./index.module.css";
@@ -12,7 +13,10 @@ function Home() {
       <br />
       <AboutLazy />
       <br />
-      <ContactLazy />
+      <div className={styles.styWrapperInfo}>
+        <TelephoneFormLazyLoader />
+        <ContactLazy />
+      </div>
     </div>
   );
 }

@@ -6,3 +6,8 @@
 .styContainerHome {
   padding: 0 20px;
 }
+
+.styWrapperInfo {
+  display: flex;
+  gap: 30px;
+}
