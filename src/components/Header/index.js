@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
 // styles
@@ -29,25 +30,21 @@ function Header() {
               {NAVIGATION.map((each, idx) => {
                 const isLast = NAVIGATION.length === idx + 1;
                 return (
-                  <>
-                    <Link
-                      to={each.path}
-                      key={each.name}
-                      className={styles.styList}
-                    >
+                  <React.Fragment key={each.name}>
+                    <Link to={each.path} className={styles.styList}>
                       <span>{each.name}</span>
                     </Link>
-                    {!isLast && (
-                      <span className={styles.styDivider} key={each.name} />
-                    )}
-                  </>
+                    {!isLast && <span className={styles.styDivider} />}
+                  </React.Fragment>
                 );
               })}
             </ul>
           </nav>
         </div>
       </header>
+
       <br />
+
       <Outlet />
     </div>
   );

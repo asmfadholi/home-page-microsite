@@ -1,0 +1,38 @@
+.styContainerAbout {
+  padding: 0 20px;
+  display: flex;
+}
+
+.styAbout1 {
+  background: #b5ae79;
+  width: 300px;
+  text-align: center;
+  padding: 15px;
+}
+
+.styAbout2 {
+  background: #acaa9d;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.styGridWrapper {
+  flex-flow: row wrap;
+  display: flex;
+  justify-content: space-around;
+}
+
+.styGridAbout2 {
+  width: 300px;
+}
+
+@media screen and (max-width: 500px) {
+  .styAbout1 {
+    flex-grow: 1;
+    width: unset;
+  }
+
+  .styContainerAbout {
+    flex-direction: column;
+  }
+}
