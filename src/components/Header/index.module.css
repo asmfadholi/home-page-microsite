@@ -1,0 +1,56 @@
+.styHeader {
+  background-image: linear-gradient(#4592a4, #6cc2c4);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.styContainer {
+  padding-top: 90px;
+}
+
+.styNavigation {
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.styListNavigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 12px;
+  padding: unset;
+}
+
+.styList {
+  text-decoration: unset;
+  color: #fff;
+}
+
+.styDivider {
+  border-right: 2px solid #fff;
+  height: 15px;
+}
+
+.styNav {
+  display: flex;
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 500px) {
+  .styNavigation {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .styListNavigation {
+    justify-content: center;
+  }
+
+  .styContainer {
+    padding-top: 140px;
+  }
+}

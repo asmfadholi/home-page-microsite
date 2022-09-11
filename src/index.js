@@ -8,6 +8,9 @@ import Header from "./components/Header";
 import HomeLazy from "./pages/home/Lazy";
 import NotFoundLazy from "./pages/not-found/Lazy";
 
+// styles
+import "./index.css";
+
 const root = createRoot(document.getElementById("root"));
 
 root.render(
