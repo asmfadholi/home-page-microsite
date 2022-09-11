@@ -8,6 +8,8 @@ import Header from "./components/Header";
 // routes
 import HomeLazy from "./pages/home/Lazy";
 import NotFoundLazy from "./pages/not-found/Lazy";
+import ContactLazyLoader from "./pages/contact/Lazy";
+import AboutLazyLoader from "./pages/about/Lazy";
 
 // styles
 import "./index.css";
@@ -20,6 +22,9 @@ root.render(
       <Routes>
         <Route path="/" element={<Header />}>
           <Route index element={<HomeLazy />} />
+          <Route path="about" element={<AboutLazyLoader />} />
+          <Route path="contact" element={<ContactLazyLoader />} />
+
           <Route path="*" element={<NotFoundLazy />} />
         </Route>
       </Routes>
